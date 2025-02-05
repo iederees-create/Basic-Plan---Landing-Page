@@ -14,10 +14,7 @@ nav {
     padding: 10px 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
 
 ul {
     list-style: none;
@@ -31,12 +28,6 @@ ul li a {
     font-weight: bold;
 }
 
-.search-login {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 input {
     padding: 5px;
 }
@@ -47,11 +38,6 @@ button {
     cursor: pointer;
 }
 
-.login {
-    text-decoration: none;
-    color: #5D0C1D;
-    font-weight: bold;
-}
 
 /* Layout */
 .container {
