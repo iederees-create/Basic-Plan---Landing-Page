@@ -10,10 +10,19 @@
             margin: 0;
             color: #0A1330; /* Dark navy text */
         }
+
         .container {
             display: flex;
             height: 100vh;
+            flex-direction: row; /* Default for larger screens */
         }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack sections vertically on smaller screens */
+            }
+        }
+
         .left-section {
             width: 50%;
             background-color: #5D0C1D; /* Deep maroon */
@@ -22,37 +31,69 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
+
+        @media (max-width: 768px) {
+            .left-section {
+                width: 100%; /* Full width on smaller screens */
+                padding: 40px 20px; /* Adjust padding for better spacing */
+            }
+        }
+
         .right-section {
             width: 50%;
             background-color: #CFB18F; /* Light tan */
-            padding: 50px;
+            padding: 20px;
+            overflow-x: auto; /* Allow horizontal scrolling for tables */
         }
+
+        @media (max-width: 768px) {
+            .right-section {
+                width: 100%; /* Full width on smaller screens */
+                padding: 20px; /* Adjust padding for better spacing */
+            }
+        }
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Reduce font size for smaller screens */
+            }
+        }
+
         .plan-details {
             text-align: center;
             margin-bottom: 30px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            font-size: 1em;
         }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9em; /* Reduce font size for better fit */
+            }
+        }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+
         th {
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0;
         }
-        .not-included {
-            color: #8B4513;
-            font-style: italic;
-        }
+
         .cta-button {
             display: inline-block;
             padding: 10px 20px;
@@ -62,53 +103,62 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+
         .social-icons {
             margin-top: 30px;
         }
+
         .social-icons a {
             margin-right: 10px;
             font-size: 1.5em;
             color: #0A1330; /* Dark navy */
+        }
+
+        @media (max-width: 768px) {
+            .social-icons a {
+                font-size: 1.2em; /* Reduce icon size for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left-section">
-            <h1>Legal Career Services</h1> 
+            <h1>Legal Career Services</h1>
             <div class="plan-details">
                 <h2>Basic Plan</h2>
                 <p>Foundational support for your legal career journey.</p>
             </div>
-            <a href="#" class="cta-button">Get Started</a>
+            <!-- Updated Get Started button with a mailto link -->
+            <a href="mailto:admin@salp.work?subject=Inquiry%20About%20Legal%20Career%20Services%20-%20Basic%20Plan&body=Dear%20%5BYour%20Name%5D,%0D%0A%0D%0AI%20hope%20this%20email%20finds%20you%20well.%20I%20am%20interested%20in%20learning%20more%20about%20the%20Legal%20Career%20Services%20%E2%80%93%20Basic%20Plan%20and%20how%20it%20can%20support%20my%20legal%20career%20journey.%0D%0A%0D%0AFrom%20the%20details%20provided,%20I%20understand%20that%20this%20plan%20includes:%0D%0A- Career%20assessments%20tailored%20to%20legal%20roles%0D%0A- Information%20on%20legal%20career%20paths%20and%20job%20applications%0D%0A- CV%20templates%20and%20examples%20for%20legal%20positions%0D%0A- Guidance%20on%20optimizing%20my%20LinkedIn%20profile%0D%0A- Mock%20interviews%20focused%20on%20legal%20questions%0D%0A- A%2030-minute%20career%20consultation%0D%0A- Networking%20advice%20and%20job%20board%20resources%0D%0A- Access%20to%20essential%20legal%20career%20resources%0D%0A%0D%0AI%20would%20love%20to%20discuss%20how%20this%20service%20can%20help%20me%20achieve%20my%20career%20goals.%20Please%20let%20me%20know%20the%20next%20steps.%0D%0A%0D%0ALooking%20forward%20to%20your%20response!%0D%0A%0D%0ABest%20regards,%0D%0A%5BYour%20Name%5D%0D%0A%5BYour%20Contact%20Information%5D" class="cta-button">Get Started</a>
         </div>
         <div class="right-section">
             <table>
                 <thead>
                     <tr>
-                        <th>Service</th>
+                        <th>Service Heading</th>
                         <th>Basic Plan</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Figuring Out Your Legal Path</td>
+                        <td>Your Legal Path</td>
                         <td>Assessments tailored to legal careers.</td>
                     </tr>
                     <tr>
-                        <td>Finding Legal Opportunities</td>
-                        <td>Information on legal career paths.</td>
+                        <td>Legal Opportunities</td>
+                        <td>Information on legal career paths and job application process.</td>
                     </tr>
                     <tr>
-                        <td>Creating a Winning Legal CV</td>
+                        <td>Creating a Legal CV</td>
                         <td>CV templates and examples for legal roles.</td>
                     </tr>
                     <tr>
-                        <td>Optimizing Your Legal LinkedIn</td>
+                        <td>Optimizing Your Profile</td>
                         <td>Guidance on building a professional LinkedIn profile.</td>
                     </tr>
                     <tr>
-                        <td>Acing Legal Interviews</td>
+                        <td>Tips for Legal Interviews</td>
                         <td>Mock interviews focused on legal questions.</td>
                     </tr>
                     <tr>
@@ -123,22 +173,6 @@
                         <td>Essential Legal Career Resources</td>
                         <td>Access to articles and guides.</td>
                     </tr>
-                    <tr>
-                        <td>Personalized Legal CV Review</td>
-                        <td class="not-included">Not Included</td>
-                    </tr>
-                    <tr>
-                        <td>Targeted Cover Letter Review</td>
-                        <td class="not-included">Not Included</td>
-                    </tr>
-                    <tr>
-                        <td>Networking Strategies for Legal</td>
-                        <td class="not-included">Not Included</td>
-                    </tr>
-                    <tr>
-                        <td>Access to Legal Career Webinars</td>
-                        <td class="not-included">Not Included</td>
-                    </tr>
                 </tbody>
             </table>
             <div class="social-icons">
@@ -149,5 +183,6 @@
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> </body>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
 </html>
